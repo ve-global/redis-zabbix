@@ -60,7 +60,8 @@ def print_keys(r, host):
   res = r.info()
 
   for p in redis_keys:
-    print '%(host)s redis.%(name)s %(val)s' % { 'host': host, 'name': p, 'val': res[p] }
+    if p in res:
+      print '%(host)s redis.%(name)s %(val)s' % { 'host': host, 'name': p, 'val': res[p] }
 
 #
 # main app
