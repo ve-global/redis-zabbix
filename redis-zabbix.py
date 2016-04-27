@@ -38,7 +38,7 @@ redis_keys = [
 ]
 
 def get_redis(options):
-  return redis.StrictRedis(host=options.host, port=options.port, db=0)
+  return redis.StrictRedis(host=options.host, password=options.password, port=options.port, db=0)
 
 def main(argv):
   p = optparse.OptionParser(conflict_handler="resolve", description="This Zabbix plugin checks the health of redis instance.")
