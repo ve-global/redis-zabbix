@@ -34,7 +34,10 @@ redis_keys = [
 'total_net_output_bytes',
 'instantaneous_ops_per_sec',
 'total_commands_processed',
-'uptime_in_seconds'
+'uptime_in_seconds',
+# legacy keys for 3.0.0 and below
+'bytes_received_per_sec',
+'bytes_sent_per_sec'
 ]
 
 def get_redis(options):
